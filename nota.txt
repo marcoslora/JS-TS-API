@@ -1,0 +1,23 @@
+Pack.json
+npm init -y
+
+npm i mssql express morgan cors dotenv @babel/core @babel/cli @babel/preset-env @babel/node nodemon -D
+nodemon refresca cada vez que guardemos un cambio en el codigo.
+mssql es un módulo que permite la comunicación y el manejo de bases de datos SQL Server desde una aplicación Node.js.    
+express es un framework para manejar endpoints y crear las diferentes rutas de la aplicacion
+Morgan es un middleware para registrar las solicitudes HTTP entrantes en una aplicación Node.js. Proporciona un registro de actividades detallado y configurable sobre las solicitudes HTTP que llegan al servidor.
+CORS (Cross-Origin Resource Sharing) es un mecanismo de seguridad implementado en los navegadores web para controlar las solicitudes HTTP realizadas desde un origen (dominio, protocolo y puerto) a otro origen diferente.
+es una política de seguridad implementada en los navegadores que permite o deniega las solicitudes de recursos.
+dotenv es un módulo de paquete de Node.js que facilita la carga de variables de entorno desde un archivo de configuración llamado ".env".
+Babel permite escribir código en una versión más nueva de JavaScript (como ES6, ES7, ES8, etc.) y luego transpilarlo a una versión más antigua (como ES5) 
+2632.00
+
+
+.babelrc
+{
+    "presets": ["@babel/preset-env"]
+}
+Pack.json
+dev: nodemon src/index.js --exec babel-node
+
+npm run dev
